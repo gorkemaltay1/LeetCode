@@ -1,6 +1,11 @@
 class Solution:
     def countDigits(self, num: int) -> int:
-        splittedList = [int(i) for i in str(num)]
+        a = num
+        splittedList = []
+        while a > 0:
+            splittedList.append(a%10)
+            a = a // 10
+            
         count = 0
         for i in splittedList:
             if num%i==0:
