@@ -1,5 +1,3 @@
-from itertools import combinations
-
 class Solution:
     def maxProductDifference(self, nums: List[int]) -> int:
         sortedNums = sorted(nums)
