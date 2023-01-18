@@ -1,8 +1,7 @@
 class Solution:
     def checkIfPangram(self, sentence: str) -> bool:
         sentence = set([*sentence])
-        alphabet = "abcdefghijklmnoprstuvyzqxw"
-        alphabet = set([*alphabet])
+        alphabet = set([*"abcdefghijklmnoprstuvyzqxw"])
         if sentence == alphabet:
             return True
         else:
