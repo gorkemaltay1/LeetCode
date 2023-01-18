@@ -1,15 +1,4 @@
 class Solution:
     def countDigits(self, num: int) -> int:
-        a = num
-        splittedList = []
-        while a > 0:
-            splittedList.append(a%10)
-            a = a // 10
-            
-        count = 0
-        for i in splittedList:
-            if num%i==0:
-                count += 1
-            else:
-                continue
-        return count
+       divisors = (i for i in map(int, str(num)) if num % i == 0)
+       return sum(1 for _ in divisors)
