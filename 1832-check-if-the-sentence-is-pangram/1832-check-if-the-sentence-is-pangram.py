@@ -4,6 +4,5 @@ class Solution:
         alphabet = set([*"abcdefghijklmnoprstuvyzqxw"])
         if sentence == alphabet:
             return True
-        else:
-            return False
+        return False
             
