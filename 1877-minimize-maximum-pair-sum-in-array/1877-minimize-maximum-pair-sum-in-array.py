@@ -1,12 +1,7 @@
 class Solution:
     def minPairSum(self, nums: List[int]) -> int:
         sortedNums = sorted(nums)
-        pairs = set()
+        ans = 0
         for i in range(len(sortedNums)//2):
-            pairs.add((sortedNums[i],sortedNums[-i-1]))
-        maxSum = 0
-        for j in pairs:
-            if sum(j) > maxSum:
-                maxSum = sum(j)
-        return maxSum
-            
+            ans = max(ans,sortedNums[i]+sortedNums[-i-1])
+        return ans
