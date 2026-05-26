@@ -7,12 +7,7 @@ class Solution:
         fourhundred = 'CD'
         ninehundred = 'CM'
         result = ""
-
-        print("binlik:",num // 1000)
-        print("yüzlük:",num // 100," ",num % 100," ",num // 100 % 10)
-        print("onluk:",num // 10," ",num % 10," ",num // 10 % 10)
-        print("birlik:",num // 1," ",num % 1," ",num % 10)
-
+        
         if num // 1000 > 0:
             result += (num // 1000) * 'M'
         if num // 100 % 10 > 0:
